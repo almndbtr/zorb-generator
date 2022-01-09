@@ -1,6 +1,7 @@
 {
   "name": "zorb-generator",
   "version": "0.0.1",
+  "author": "almndbtr <78528185+almndbtr@users.noreply.github.com> (https://github.com/almndbtr)",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
