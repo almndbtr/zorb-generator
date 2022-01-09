@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import { address } from '../stores.js';
+</script>
+
+<h2>Zorb Generator</h2>
+<h4>Current Address: {$address}</h4>
+<button on:click={address.random}>Random Zorb</button>
+<zora-zorb address={$address} size="20%"></zora-zorb>
+
