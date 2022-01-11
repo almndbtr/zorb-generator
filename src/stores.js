@@ -1,3 +1,4 @@
+import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
@@ -22,7 +23,12 @@ function createAddress() {
     return {
         // It implements `subscribe`, so it's a store 😉
         subscribe,
-        random: () => set(randomAddress()),
+        set,
+        random: () => {
+            let ra = randomAddress()
+            set(ra)
+            window.location.hash = `#${ra}`
+        },
         reset: () => set(ZERO_ADDRESS)
     };
 }
