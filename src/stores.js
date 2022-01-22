@@ -29,7 +29,10 @@ function createAddress() {
             set(ra)
             window.location.hash = `#${ra}`
         },
-        reset: () => set(ZERO_ADDRESS)
+        reset: () => {
+            set(ZERO_ADDRESS)
+            window.location.hash = ZERO_ADDRESS
+        }
     };
 }
 
